@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kelompok 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <div id="title">kelompok 2</div><br>
+    <div id="links">
+        <a href="#skills">Nama Kelompok</a>
+        <a href="#work" style="margin:0px 60px;">Rumus</a>
+        <a href="#contact">Soal</a>
+    </div>
+    </div>
+
+    <center>
+    <div id="middle">
+        <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
+            Selamat Datang<br>
+        </div>
+    </div>
+    </center>
+
+    <div id="portfolio">
+    <div id="skills">
+        <h1>Nama Kelompok</h1>
+        <div>
+            <p>
+                - NARIS HAFIDZ FAHREZI (A11.2022.14709)<br>
+                <br>
+                - M. BARAJA RAHARDIANSYAH(A11.2022.14716)<br>
+                <br>
+                - HELMI AZKIA(A11.2022.14733)<br>
+                <br>
+                - RAFIE TEGAR VIRGANANDA SP(A11.2022.14845)<br>
+                <br>
+                - EKA RIZKY ANGGI SARASWATI(A11.2022.14789)<br>
+                <br>
+                - KHARISMA ALWI ALFARIZI(A11.2022.14790)<br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+    <div id="work">
+        <div class="container">
+            <h1>Rumus Usaha</h1>
+            <div>
+                <p>
+                    W = F x s.<br><br>Seperti yang telah dijelaskan sebelumnya, rumus usaha bisa bernilai positif dan negatif tergantung arah gayanya. Jika gaya yang bekerja searah dengan perpindahan benda, maka usaha bernilai positif, dengan rumus W = F x s. <br><br>Gaya dapat dihitung menggunakan rumus Usaha = F × D × Cosin(θ), dengan F = gaya (dalam Newton), D = perpindahan (dalam meter), dan θ = sudut antara vektor gaya dan arah pergerakan.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="work">
+        <h1>Soal</h1>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>Yanto bermain basket dengan gaya <input type="number" id="gaya" required> Newton. Ia melempar bola <input type="number" id="jarak" required> meter ke arah yang sama dengan gaya dan membentuk sudut <input type="number" id="sudut" required> ° terhadap bidang datar. Berapakah usaha yang dilakukan oleh Yanto tersebut?</p>
+                    </div>
+                    <button type="button" class="btnn" onclick="btn()">Jawab</button>
+                </div>
+            </div>
+            <div id="hasil" class="mt-4"></div>
+        </div>
+        <script>
+            function btn() {
+              var gaya = parseInt(document.querySelector("#gaya").value);
+              var jarak = parseInt(document.querySelector("#jarak").value);
+              var sudut = parseInt(document.querySelector("#sudut").value);
+        
+              var usaha = gaya * jarak * Math.cos(sudut * Math.PI / 180);
+        
+              var hasilElement = document.querySelector("#hasil");
+              hasilElement.innerHTML = "<h3>Usaha yang dilakukan: " + usaha + " joule</h5>";
+        
+              // Menampilkan cara pengerjaan hasil
+              var caraPengerjaanElement = document.createElement("p");
+              caraPengerjaanElement.innerHTML = "Untuk menghitung usaha, kita menggunakan rumus: <br>" +
+                "<br>" +
+                "Usaha = gaya × jarak × cos(θ)<br>" +
+                "<br>" +
+                "Diketahui : <br>" +
+                " <br>" +
+                "Gaya = " + gaya + " Newton<br>" +
+                "Jarak = " + jarak + " Meter<br>" +
+                "Sudut = " + sudut + " °<br>" +
+                " <br>" +
+                "Ditanya = w? <br>" +
+                " <br>" +
+                "Cara pengerjaan: <br>" +
+                "Usaha = gaya x jarak <br>" +
+                "Usaha = " + gaya + " Newton x " + jarak + " meter x cos(" + sudut + " °)<br>" +
+                "Usaha = " + usaha + " joule";
+              hasilElement.appendChild(caraPengerjaanElement);
+            }
+          </script>
+    </div>
+    <div id="footer">
+        Terima Kasih<br><br> <a href="#">Bara</a>
+    </div>
+</div>
+<script src="index.js" type="text/javascript"></script>
+</body>
+</html>
